@@ -29,7 +29,7 @@
   <h3 align="center">SaiGO</h3>
 
   <p align="center">
-    A macro for new BIG Game's game, <b>PETS GO!</b> based on <a href="https://www.python.org/">Python</a>.
+    A macro for the new BIG Game's game, <b>PETS GO!</b> based on <a href="https://www.python.org/">Python</a>.
     <br />
     <a href="https://github.com/steveonly2/SaiGO"><strong>Explore the docs »</strong></a>
     <br />
@@ -57,7 +57,7 @@
 <!-- Description -->
 ## Description
 
-<b>SaiGO</b> is a macro for the new game from BIG Games, <b>PETS GO!</b> This is a RNG based game which spins-off from the Pet Simulator series. The macro is based on <a href="https://www.python.org/">Python</a>, which allowed us to do much more than AutoHotkey. This allowed us to modernize the GUI and improve the reliability of the macro. SaiGO is still in its early stages, expect some bugs and upcoming changes soon.
+<b>SaiGO</b> is a macro for the new game from BIG Games, <b>PETS GO!</b> This is an RNG-based game that spins off from the Pet Simulator series. The macro is based on <a href="https://www.python.org/">Python</a>, which allowed us to do much more than AutoHotkey. This allowed us to modernize the GUI and improve the reliability of the macro. SaiGO is still in its early stages, expect some bugs and upcoming changes soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
