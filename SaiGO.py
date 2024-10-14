@@ -5,7 +5,8 @@ import os
 import sys
 import time
 import threading
-import keyboard  
+import keyboard
+from PIL import Image
 
 customtkinter.set_appearance_mode("light")
 customtkinter.set_default_color_theme("green")
@@ -106,16 +107,17 @@ credits_frame = customtkinter.CTkFrame(tabView.tab("Credits"))
 credits_frame.pack(padx=10, pady=10, fill="both", expand=True)
 
 # Unique Font Text
-credits_label = customtkinter.CTkLabel(credits_frame, text="Credits To steveonly4", font=("Comic Sans MS", 24))
+credits_label = customtkinter.CTkLabel(credits_frame, text="Credits to steveonly4", font=("Comic Sans MS", 18))
 credits_label.pack(pady=(10, 5))
 
 # Load Image
-image_path = r"C:\SaiGO\images\credits.png"  # Path to your image
+image_path = r"images\\credits.png"  # Path to your image
 
 # Load the image
 try:
-    image = tkinter.PhotoImage(file=image_path)
-    image_label = customtkinter.CTkLabel(credits_frame, image=image)
+    image = Image.open(image_path)
+    image = customtkinter.CTkImage(light_image=image, dark_image=image, size=(128,99))
+    image_label = customtkinter.CTkLabel(credits_frame, text="", image=image)
     image_label.pack(pady=(5, 10))
 except tkinter.TclError:
     print("Error loading image. Please check the file path.")
