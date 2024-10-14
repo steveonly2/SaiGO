@@ -57,7 +57,7 @@
 <!-- Description -->
 ## Description
 
-<b>SaiGO</b> is a macro for the new game from BIG Games, <b>PETS GO!</b> This is a RNG based game which spins-off from the Pet Simulator series. The macro is based on <a href="https://www.python.org/">Python</a>, which allowed us to do much more than AutoHotkey. This allowed us to modernize the GUI and improve reliability of the macro. SaiGO is still in it's early stages, expect some bugs and upcoming changes soon.
+<b>SaiGO</b> is a macro for the new game from BIG Games, <b>PETS GO!</b> This is a RNG based game which spins-off from the Pet Simulator series. The macro is based on <a href="https://www.python.org/">Python</a>, which allowed us to do much more than AutoHotkey. This allowed us to modernize the GUI and improve the reliability of the macro. SaiGO is still in its early stages, expect some bugs and upcoming changes soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,9 +70,9 @@ This macro is based on a programming language called <a href="https://www.python
 
 After you've installed Python. You now can download this macro from <a href="https://github.com/steveonly2/SaiGO/releases">here</a>. Make sure you downloaded `SaiGO.zip` if you wanted the macro, _but if you're a developer who wants to modify the macro, make sure to download `Source Code` instead._
 
-After you downloaded, you should extract `SaiGO.zip` to a folder. In that folder you'll find `SaiGO.py`, `LICENSE.txt` and `install.bat`.
+After you downloaded, you should extract `SaiGO.zip` to a folder. In that folder you'll find `SaiGO.py`, `LICENSE.txt`, and `install.bat`.
 
-To use the macro, you needed to run `install.bat` to install dependencies required for the macro. This file will delete itself and log the actions in `log.txt`. If you haven't downloaded Python yet, it will not delete itself and suggest you to download Python. Once again, if you haven't install it yet, follow the <a href="#installation">guide</a> above.
+To use the macro, you needed to run `install.bat` to install the dependencies required for the macro. This file will delete itself and log the actions in `log.txt`. If you haven't downloaded Python yet, it will not delete itself, and suggest you download Python. Once again, if you haven't installed it yet, follow the <a href="#installation">guide</a> above.
 
 After everything, you can run `SaiGO.py` to start using the macro.
 
@@ -101,6 +101,6 @@ README.md template from <a href="https://github.com/othneildrew/Best-README-Temp
 <!-- LICENSE -->
 ## License
 
-Distributed under the GPL-3.0 License. See `LICENSE.txt` for more information.
+Distributed under the GPL-3.0 License. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
