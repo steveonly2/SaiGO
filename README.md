@@ -36,6 +36,8 @@
     <br />
     <a href="https://github.com/steveonly2/SaiGO/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
+    <a href="https://discord.gg/JmeRE5Cv2e">Discord Server</a>
+    ·
     <a href="https://github.com/steveonly2/SaiGO/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
