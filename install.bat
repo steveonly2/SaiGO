@@ -3,7 +3,7 @@ if errorlevel 1 goto errorNoPython
 
 cls
 
-set list=customtkinter pyautogui tkinter os sys time thisdoesnotnotexists threading keyboard PIL
+set list=customtkinter pyautogui tkinter os sys time threading keyboard pillow
 
 cls
 
