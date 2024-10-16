@@ -1,26 +1,31 @@
+@echo off
+setlocal
+
 python --version 2>NUL
 if errorlevel 1 goto errorNoPython
 
-cls
+:: Define the list of modules
+set modules=customtkinter os keyboard threading pyautogui sys pillow ahk math json
 
-set list=customtkinter pyautogui tkinter os sys time threading keyboard pillow
+:: Loop through each module and check if it's installed
+for %%m in (%modules%) do (
+    python -c "import %%m" 2>NUL
+    if errorlevel 1 (
+        echo Installing %%m...
+        pip install %%m
+    ) else (
+        echo %%m is already installed. Skipping...
+    )
+)
 
-cls
+:: Show success message
+echo Successfully installed all modules!
 
-(for %%a in (%list%) do (
-   pip install %%a
-   echo/
-)) > log.txt
-
-cls
-
-@echo off
-set /p "confirmation=Press Enter to Continue... "
-
+:: End script
+set /p "confirmation=Press ENTER to Continue... "
 goto 2>nul & del "%~f0"
 
 :errorNoPython
-echo.
+cls
 echo Error^: Python not installed
-@echo off
-set /p "confirmation=Press Enter to Continue... "
+set /p "confirmation=Press ENTER to Continue... "
