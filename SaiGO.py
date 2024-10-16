@@ -10,7 +10,7 @@ customtkinter.set_appearance_mode("light")
 customtkinter.set_default_color_theme("green")
 app = customtkinter.CTk()
 app.title("SaiGO")
-app.geometry("300x300")
+app.geometry("500x500")
 
 tabView = customtkinter.CTkTabview(app)
 tabView.pack(padx=20, pady=20)
@@ -26,7 +26,8 @@ default_settings = {
     "upgrade": 0,
     "upgrade_delay": 5,
     "upgrade_startpos": 0,
-    "upgrade_cooldown": 0
+    "upgrade_cooldown": 0,
+    "vendingpath" : 0
     }
 
 
@@ -83,6 +84,11 @@ def mainLoop():
                     sleep(1000)
                     back_upgrade()
                     exit_upgrade()
+        
+        if config["vendingpath"] == 1:
+            # if config["vending_cooldown"] == 0: # if you want to add it
+            walk_to_vending()
+            return
 
         if config["autoclicker"] == 1:
             config["autoclicker_running"] = 1
@@ -180,6 +186,15 @@ def toggle_upgrade_path():
     else:
         print("disabled this thing")
 
+def toggle_vending_path():
+    config["vendingpath"] = vending_path_var.get()
+    update_config()
+
+    if config["vendingpath"]:
+        print("enabled vending path")
+    else:
+        print("disabled vendingpath")
+
 def update_upgrade_delay_label(value):
     upgrade_delay_label.configure(text=f"Upgrade Delay: {int(value)} min")
     config["upgrade_delay"] = value
@@ -223,6 +238,9 @@ def reset_upgrade_zoom():
         press("i")
     for _ in range(10):
         press("o")
+
+def walk_to_vending():
+    keypress('w', 5000) # check controls_module for some functions
 
 def test_module(): # un upgraded square checker
     search_size = 5
@@ -280,18 +298,31 @@ dark_mode_checkbox = customtkinter.CTkCheckBox(settings_frame, text="Dark Mode",
 dark_mode_checkbox.pack(pady=(5, 10))
 
 # Path Settings Section
+# Path Label
 path_label = customtkinter.CTkLabel(settings_frame, text="Path Settings", font=("Arial", 16))
 path_label.pack(pady=(10, 5))
 
+# Create a frame to hold the checkboxes side by side
+checkbox_frame = customtkinter.CTkFrame(settings_frame)
+checkbox_frame.pack(pady=(5, 10), fill="x")  # Align checkboxes in this frame
+
+# Auto Click Macro Checkbox
 auto_macro_var = tkinter.IntVar()
 auto_macro_var.set(config["autoclicker"])
-auto_macro_checkbox = customtkinter.CTkCheckBox(settings_frame, text="Auto Click Macro", variable=auto_macro_var, command=toggle_auto_macro)
-auto_macro_checkbox.pack(pady=(5, 10))
+auto_macro_checkbox = customtkinter.CTkCheckBox(checkbox_frame, text="Auto Click Macro", variable=auto_macro_var, command=toggle_auto_macro)
+auto_macro_checkbox.pack(side="left", padx=(10, 10))
 
+# Upgrade Path Checkbox
 upgrade_path_var = tkinter.IntVar()
 upgrade_path_var.set(config["upgrade"])
-upgrade_path_checkbox = customtkinter.CTkCheckBox(settings_frame, text = "Upgrade Path", variable= upgrade_path_var, command= toggle_upgrade_path)
-upgrade_path_checkbox.pack(pady=(5, 10))
+upgrade_path_checkbox = customtkinter.CTkCheckBox(checkbox_frame, text="Upgrade Path", variable=upgrade_path_var, command=toggle_upgrade_path)
+upgrade_path_checkbox.pack(side="left", padx=(10, 10))
+
+# Auto Use Vending Machine Checkbox
+vending_path_var = tkinter.IntVar()
+vending_path_var.set(config["vendingpath"])
+vending_path_checkbox = customtkinter.CTkCheckBox(checkbox_frame, text="Auto Use Vending Machine", variable=vending_path_var, command=toggle_vending_path)
+vending_path_checkbox.pack(side="left", padx=(10, 10))
 
 # Credits Tab
 credits_frame = customtkinter.CTkFrame(tabView.tab("Credits"))
