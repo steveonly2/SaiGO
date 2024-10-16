@@ -78,3 +78,20 @@ def find_color(color, start1, start2, end1, end2):
         return xp, yp
     except TypeError:
         return 0, 0
+
+def keydown(key):
+    ahk.key_down(key)
+
+def keyup(key):
+    ahk.key_up(key)
+
+def keypress(key, duration = 0):
+    if duration == 0:
+        ahk.key_press(key)
+    else:
+        ahk.key_down(key)
+        sleep(duration)
+        ahk.key_up(key)
+
+def send(message):
+    ahk.type(message)
