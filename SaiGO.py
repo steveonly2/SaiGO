@@ -38,13 +38,13 @@ config_path = os.path.join(sys.path[0], 'config.json')
 if not os.path.isfile(config_path):
     with open(config_path, 'w') as f:
         json.dump(default_settings, f)
-else:
-    with open(config_path, 'r') as f:
-        config = json.load(f)
+        
+with open(config_path, 'r') as f:
+    config = json.load(f)
 
-    for key in default_settings.keys():
-        if key in config:
-            default_settings[key] = config[key]
+for key in default_settings.keys():
+    if key in config:
+        default_settings[key] = config[key]
 
     with open(config_path, 'w') as f:
         json.dump(default_settings, f)
