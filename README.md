@@ -66,18 +66,7 @@
 <!-- INSTALLATION -->
 ## Installation
 
-This macro is based on a programming language called <a href="https://www.python.org/">Python</a>. If you haven't already, you need to install the latest Python version from <a href="https://www.python.org/downloads/">here</a>. Make sure you `add python.exe to PATH` and then press `Install Now`, as shown here.<br>
-
-<img src="images/tutorial1.png" alt="tutorial1" align=center><br>
-
-After you've installed Python. You now can download this macro from <a href="https://github.com/steveonly2/SaiGO/releases">here</a>. Make sure you downloaded `SaiGO.zip` if you wanted the macro, _but if you're a developer who wants to modify the macro, make sure to download `Source Code` instead._
-
-After you downloaded, you should extract `SaiGO.zip` to a folder. In that folder you'll find `SaiGO.py`, `LICENSE.txt`, and `install.bat`.
-
-To use the macro, you needed to run `install.bat` to install the dependencies required for the macro. This file will delete itself and log the actions in `log.txt`. If you haven't downloaded Python yet, it will not delete itself, and suggest you download Python. Once again, if you haven't installed it yet, follow the <a href="#installation">guide</a> above.
-
-After everything, you can run `SaiGO.py` to start using the macro.
-
+Install AHK 1.1 And download the latest version of saiglon and run it! and your done.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -96,7 +85,7 @@ To use the macro, you can click `F1 START` to start the macro, and to stop it, y
 
 <b>SaiGO</b> created by steveonly4 and innocenthuman.
 
-Programming Language: <a href="https://www.python.org/">Python</a>
+Programming Language: AHK
 
 README.md template from <a href="https://github.com/othneildrew/Best-README-Template/tree/main">Best README Template</a>
 
